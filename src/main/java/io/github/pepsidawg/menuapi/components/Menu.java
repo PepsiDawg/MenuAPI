@@ -49,6 +49,14 @@ public class Menu implements Listener {
         return this.size;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     public boolean isOpened() {
         return this.opened;
     }
