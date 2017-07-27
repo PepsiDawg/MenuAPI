@@ -1,0 +1,5 @@
+main: io.github.pepsidawg.menuapi.MenuAPI
+name: MenuAPI
+version: 0.1
+authors: [PepsiDog]
+description: A simple menu API
