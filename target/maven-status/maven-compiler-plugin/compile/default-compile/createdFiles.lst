@@ -1,6 +1,6 @@
-io\github\pepsidawg\menuapi\components\Button.class
-io\github\pepsidawg\menuapi\components\InventoryIdentifier.class
-io\github\pepsidawg\menuapi\components\Menu.class
-io\github\pepsidawg\menuapi\components\ToggleButton.class
+io\github\pepsidawg\menuapi\Button.class
 io\github\pepsidawg\menuapi\MenuAPI.class
-io\github\pepsidawg\menuapi\components\ClickedCallback.class
+io\github\pepsidawg\menuapi\ClickedCallback.class
+io\github\pepsidawg\menuapi\ToggleButton.class
+io\github\pepsidawg\menuapi\InventoryIdentifier.class
+io\github\pepsidawg\menuapi\Menu.class

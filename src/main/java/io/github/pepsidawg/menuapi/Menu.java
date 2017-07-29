@@ -1,6 +1,5 @@
-package io.github.pepsidawg.menuapi.components;
+package io.github.pepsidawg.menuapi;
 
-import io.github.pepsidawg.menuapi.MenuAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,6 +9,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.event.inventory.InventoryMoveItemEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.plugin.Plugin;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,16 +22,16 @@ public class Menu implements Listener {
     private Player player;
     private Inventory inventory;
 
-    public Menu() {
-        this("Menu", 9);
+    public Menu(Plugin host) {
+        this("Menu", 9, host);
     }
 
-    public Menu(String title, int size) {
+    protected Menu(String title, int size, Plugin host) {
         this.title = title;
         this.size = size;
         this.items = new HashMap<>();
         this.opened = false;
-        Bukkit.getServer().getPluginManager().registerEvents(this, MenuAPI.getInstance());
+        Bukkit.getServer().getPluginManager().registerEvents(this, host);
     }
 
     public void open(Player player) {
@@ -119,7 +119,6 @@ public class Menu implements Listener {
 
     @EventHandler
     public void itemDrag(InventoryDragEvent event) {
-        Bukkit.broadcastMessage("test");
         if(this.player == event.getWhoClicked() && this.isOpened()) {
             event.setCancelled(true);
         }

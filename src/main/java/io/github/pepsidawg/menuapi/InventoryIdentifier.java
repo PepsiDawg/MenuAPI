@@ -1,4 +1,4 @@
-package io.github.pepsidawg.menuapi.components;
+package io.github.pepsidawg.menuapi;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;

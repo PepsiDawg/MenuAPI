@@ -1,4 +1,4 @@
-package io.github.pepsidawg.menuapi.components;
+package io.github.pepsidawg.menuapi;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -18,7 +18,7 @@ public class Button {
         this(Material.STONE, "Button", null, null);
     }
 
-    public Button(Material icon, String title, List<String> description, ClickedCallback callback) {
+    protected Button(Material icon, String title, List<String> description, ClickedCallback callback) {
         this.icon = icon;
         this.title = title;
         this.description = description;

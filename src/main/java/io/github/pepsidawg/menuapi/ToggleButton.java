@@ -1,4 +1,4 @@
-package io.github.pepsidawg.menuapi.components;
+package io.github.pepsidawg.menuapi;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -12,7 +12,7 @@ public class ToggleButton extends Button {
         this(Material.STONE, "Button", null, null, false);
     }
 
-    public ToggleButton(Material icon, String title, List<String> description, ClickedCallback callback, boolean state) {
+    protected ToggleButton(Material icon, String title, List<String> description, ClickedCallback callback, boolean state) {
         super(icon, title, description, callback);
         this.state = state;
     }
